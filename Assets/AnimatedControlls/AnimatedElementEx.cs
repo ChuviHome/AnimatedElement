@@ -169,6 +169,8 @@ public class AnimatedElementEx : MonoBehaviour
            t = 0;
         isStartEventRun = false;
         isEndEventRun = false;
+        if (IsRandomTimeWait)
+            TimeWait = Random.Range(0.0f, this.MaxRandomTimeWait);
 
         if (commonTransform == null)
             commonTransform = transform;
