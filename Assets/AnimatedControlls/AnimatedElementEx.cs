@@ -162,8 +162,13 @@ public class AnimatedElementEx : MonoBehaviour
 
     private void OnEnable()
     {
+        Play();
+    }
+
+    public void Play()
+    {
         OnEnableEvent.Invoke();
-           t = 0;
+        t = 0;
         isStartEventRun = false;
         isEndEventRun = false;
         if (IsRandomTimeWait)
@@ -186,7 +191,7 @@ public class AnimatedElementEx : MonoBehaviour
             actions.mainTransform = commonTransform;
         if (material.mainTransform == null)
             material.mainTransform = commonTransform;
-        if(!Pause)
+        if (!Pause)
             ResetInFromState();
     }
 
