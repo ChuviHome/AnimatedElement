@@ -130,6 +130,7 @@ public abstract class AnimatedBehaviour
                         float ttt = GetTime(Mathf.Repeat(t, AnimationTime), AnimationTime);
                         CurveValue = curve.Evaluate(ttt);
                         OnAction(ttt, CurveValue);
+                        EndAnimation.Invoke(this, ttt);
                         IsWaiting = false;
                     }
                     else
