@@ -70,7 +70,7 @@ public class AnimatedColor : AnimatedBehaviour
     protected override void OnAction(float _time, float curveValue)
     {
         if (Exists(ColorAnimation.Image) && coloredImage == null)
-            coloredImage = mainTransform.GetComponent<Image>();
+            coloredImage = mainTransform.GetComponent<Graphic>();
         if (Exists(ColorAnimation.Effect) && coloredEffect == null)
             coloredEffect = mainTransform.GetComponent<Shadow>();
         if (Exists(ColorAnimation.CanvasGroup) && coloredCanvasGroup == null)
